@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    
+       <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{csrf_token(}}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" th:href="@{/css/form.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+     
+</head>
+<body>
+
+
+	  
+			
+    <fieldset id="mainform">
+        <legend> Query form:</legend>
+        <form id="contact-form" action="#" >
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="input">
+            <p id="name-error"></p>
+            <br>
+            <label for="age">Age:</label>
+            <input type="number" name="age"  id="age">
+            <p id="age-error"></p>
+            <br>
+            <label for="gmail">Gmail</label>
+            <input type="text" id="gmail" name="gamil">
+            <p></p>
+            <br>
+            <label for="query" id="query-label">enter your Question:</label>
+            <textarea name="Text1" cols="40" rows="5" id="query"></textarea>
+            <br>
+            <input type="submit" value="submit" id="submit" >
+        </form>
+    </fieldset>
+    <div class="back-home ">
+       <h2 id="back-msg"  style="color:black"> </h2>
+    </div>
+    <style>
+    .back-home{
+    display:none;
+    background-color:antiquewhite;
+    text-align:center;
+    color:black;
+    width:400px;
+    height:auto;
+    border-radius:20px
+    }
+    #back-link{
+    display:none
+    }
+    #back-msg{
+      margin-bottom:25px;
+    }
+    </style>
+    <a id="back-link" th:href="@{/}"  style="margin:30px">back to home page</a>
+    
+ 
+     
+    
+   
+    
+    <script th:src="@{js/jquery-3.7.0.js}"></script>
+    <script th:src="@{/js/script.js}"></script>
+    <script th:src="@{/js/validator.js}"></script>
+</body>
+
+</html>
